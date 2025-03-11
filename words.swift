@@ -9,9 +9,13 @@ print("================================")
 
 do {
 
-    let file = "/Users/jining/Library/Mobile Documents/com~apple~CloudDocs/School/11/Lit/Dalloway Project/text.txt"
-    let path = URL(fileURLWithPath: file)
-    var text = try String(contentsOf: path, encoding: .utf8)
+    let bookPath = "/Users/jining/Library/Mobile Documents/com~apple~CloudDocs/School/11/Lit/Dalloway Project/text.txt"
+    let bookUrl = URL(fileURLWithPath: bookPath)
+    var text = try String(contentsOf: bookUrl, encoding: .utf8)
+
+    let commonWordsPath = "/Users/jining/Library/Mobile Documents/com~apple~CloudDocs/School/11/Lit/Dalloway Project/common.txt"
+    let commonWordsUrl = URL(fileURLWithPath: commonWordsPath)
+    let common = try String(contentsOf: commonWordsUrl, encoding: .utf8)
 
     text = text.replacingOccurrences(of: "?", with: "")
     text = text.replacingOccurrences(of: ".", with: "")
@@ -30,7 +34,7 @@ do {
 
     for phrase in array {
         if !phrase.isEmpty {
-            words += phrase.components(separatedBy: " ")
+            words += phrase.components(separatedBy: " ").map { $0.lowercased() }
         }
     }
 
@@ -47,6 +51,11 @@ do {
     }
 
     print(dict)
+
+    print("================================")
+    print("Longest Word: \(dict.last!.key)")
+    print("Most Occurrences: \(dict.filter({ !common.contains($0.key) }).sorted(by: { $0.value >= $1.value }).prefix(20))")
+
 
 } catch {
     print("Error: \(error.localizedDescription)")
