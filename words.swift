@@ -9,11 +9,12 @@ print("================================")
 
 do {
 
-    let bookPath = "/Users/jining/Library/Mobile Documents/com~apple~CloudDocs/School/11/Lit/Dalloway Project/text.txt"
+    let path = FileManager.default.currentDirectoryPath
+    let bookPath = path + "/text.txt"
     let bookUrl = URL(fileURLWithPath: bookPath)
     var text = try String(contentsOf: bookUrl, encoding: .utf8)
 
-    let commonWordsPath = "/Users/jining/Library/Mobile Documents/com~apple~CloudDocs/School/11/Lit/Dalloway Project/common.txt"
+    let commonWordsPath = path + "/common.txt"
     let commonWordsUrl = URL(fileURLWithPath: commonWordsPath)
     let common = try String(contentsOf: commonWordsUrl, encoding: .utf8)
 

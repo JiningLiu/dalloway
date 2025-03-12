@@ -21,9 +21,6 @@ at
 of
 basically
 essentially
-literally
-clearly
-obviously
 somewhat
 somehow
 anyway
@@ -44,7 +41,6 @@ maybe
 probably
 rather
 indeed
-after all
 like
 around
 about
@@ -95,3 +91,13 @@ miss
 came
 man
 felt
+say
+being
+always
+might
+time
+something
+himself
+come
+go
+only

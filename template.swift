@@ -9,7 +9,7 @@ print("================================")
 
 do {
 
-    let file = "/Users/jining/Library/Mobile Documents/com~apple~CloudDocs/School/11/Lit/Dalloway Project/text.txt"
+    let file = FileManager.default.currentDirectoryPath + "/text.txt"
     let path = URL(fileURLWithPath: file)
     var text = try String(contentsOf: path, encoding: .utf8)
 
