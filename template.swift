@@ -8,8 +8,7 @@ print("Program Template")
 print("================================")
 
 do {
-
-    let file = FileManager.default.currentDirectoryPath + "/text.txt"
+    let file = FileManager.default.currentDirectoryPath + "/Users/jining/Library/Mobile Documents/com~apple~CloudDocs/School/11/Lit/Dalloway Project/text.txt"
     let path = URL(fileURLWithPath: file)
     var text = try String(contentsOf: path, encoding: .utf8)
 
@@ -24,12 +23,10 @@ do {
 //    text = text.replacingOccurrences(of: ")", with: "")
 //    text = text.replacingOccurrences(of: ";", with: "")
 
-    print(text)
-
 } catch {
     print("Error: \(error.localizedDescription)")
 }
 
 print("================================")
-print("Done ✅")
-print("Execution Time: \((DispatchTime.now().uptimeNanoseconds - start) / 1000000)ms")
+print("Processing Complete ✅")
+print("Execution Time: \((DispatchTime.now().uptimeNanoseconds - start) / 1_000_000)ms")
