@@ -11,7 +11,7 @@ do {
     print("Character name (e.g. septimus)")
 
     let path = FileManager.default.currentDirectoryPath
-    let bookPath = path + "/" + readLine()!.lowercased()
+    let bookPath = path + "/" + readLine()!.lowercased() + ".txt"
 
     let start = DispatchTime.now().uptimeNanoseconds
 
@@ -39,7 +39,7 @@ do {
         sentiments.append(score)
 
         print("----------------")
-        print("Item", index, "Sentiment:", score)
+        print("Chunk", index, "Sentiment:", score)
     }
 
     print("----------------")
