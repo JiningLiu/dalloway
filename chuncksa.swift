@@ -44,6 +44,7 @@ do {
 
     print("----------------")
     print(sentiments)
+    print("Average:", sentiments.reduce(0, +) / Double(sentiments.count))
 
     print("================================")
     print("Processing Complete ✅")
