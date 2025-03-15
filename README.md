@@ -24,7 +24,8 @@ swiftly install latest
    - Replace `words.swift` with whatever `.swift` file you would like to run.
 
 ## Code Files
-- `fsa.swift` - Filtered Sentiment Analysis
+- `paragraghsa.swift` - Sentiment analysis by character's paragraghs
+- `chuncksa.swift`  Sentiment analysis by character's paragraph chuncks
 - `length.swift` - Find word & occurrences based on sorted length index
 - `occurrences.swift` - Find word & occurrences based on sorted occurrences index
 - `search.swift` - Search anything in the text
